@@ -32,6 +32,7 @@ body {
   letter-spacing: 2px;
   word-spacing: 3px;
 }
+
 .app {
   position: relative;
 }
@@ -49,9 +50,30 @@ body {
   z-index: -9999;
   opacity: 0.07;
 }
+
+.link-item {
+  position: relative;
+}
+
+.link-item::after {
+  content: "";
+  background-color: var(--color-light);
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  left: 0;
+  bottom: -2px;
+  transition: 0.5s;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
 .hero {
   position: relative;
 }
+
 .hero-img {
   height: 350px;
   width: 350px;
@@ -69,10 +91,12 @@ body {
   top: 0;
   left: 0;
 }
+
 .shutter-right {
   bottom: 0;
   right: 0;
 }
+
 .circle-left,
 .circle-right {
   height: 700px;
@@ -90,6 +114,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .circle-left {
   top: -40%;
   left: -20%;
